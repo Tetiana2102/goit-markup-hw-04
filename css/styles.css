@@ -53,13 +53,10 @@ section {
 .header-container{
   display: flex;
   align-items: center;
-
 } 
 .container-items {
   display: flex;
-  align-items: center;
-
-  
+  align-items: center; 
 }
 .header-list {
   display: flex;
@@ -100,12 +97,7 @@ section {
   letter-spacing: 0.02em;
   color: var(--header-color);
 }
-.header-link:hover, 
-.header-link:focus,
-.header-contacts:hover,
-.header-contacts:focus {
-  color: var(--accent-color);
-}
+
 
 .header-contacts {
   font-style: normal;
@@ -115,6 +107,28 @@ section {
   letter-spacing: 0.02em;
   color: var(--color-text);
 }
+
+.header-link:hover, 
+.header-link:focus,
+.header-contacts:hover,
+.header-contacts:focus {
+  color: var(--accent-color);
+}
+.header-email {
+
+  cursor: pointer;
+  fill: var(--color-text);
+  margin-right: 10px;
+}
+.header-email:hover,
+.header-email:focus {
+  fill: var(--accent-color);
+}
+
+
+
+
+
 
 /*--Шапка--*/
 
@@ -187,8 +201,6 @@ section {
 .tagline-btn:focus {
   background-color: #188CE8;
 }
-
-
 /*---Список качеств---*/
 .feature {
   padding-top: 94px;
@@ -329,7 +341,6 @@ section {
   align-items: center;
   text-align: center;
   margin-bottom: 16px;
-
 }
 .team-list {
   display: flex;
@@ -353,8 +364,8 @@ section {
 
 }
 .team-social-item+.team-social-item {
-  margin-bottom: 30px;
   margin-left: 10px;
+  margin-bottom: 0px;
 }
 .team-social-link {
   width: 44px;
@@ -364,7 +375,9 @@ section {
   justify-content: center;
   align-content: center;
   border-radius: 50%;
-  
+  margin-bottom: 30px;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -378,7 +391,67 @@ section {
 }
 .social-icon {
   fill: #AFB1B8;
+
 }
+/*--Постоянные клиенты--*/
+.client {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.client-container {
+  width: 1200px;
+  height: 184px;
+}
+.client-text {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  color: var(--header-color);
+  align-items: center;
+  text-align: center;
+  padding-bottom: 50px;
+  
+}
+
+  .client-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -50px;
+    margin-bottom: 122px;
+    color: purple;
+    
+  }
+  .client-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    margin-left: 30px;
+    margin-top: 50px;
+    color: #AFB1B8;
+    width: 170px;
+    height: 92px;
+    
+  }
+  .client-link:hover,
+  .client-link:focus {
+    border: 1px solid var(--accent-color);
+  }
+  .client-link:hover .client-icon,
+  .client-link:focus .client-icon {
+  fill: var(--accent-color);
+  }
+
+  .client-icon {
+    fill: #AFB1B8;
+    
+  }
+
+
+
 
 
 /*--Подвал--*/
@@ -388,6 +461,15 @@ section {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.container-footer {
+  display: flex;
+  align-items: baseline;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
 
 .footer-logo {
   font-family: Raleway, sans-serif;
@@ -425,7 +507,47 @@ section {
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
-  
+}
+
+.container-right {
+  width: 206px;
+  height: 80px;
+  margin-left: 70px;
+
+}
+.footer-title-link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0px;
+}
+.footer-social-list-item:not(:first-child) {
+  margin-left: 10px;
+}
+.footer-social-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+.footer-link-icons {
+  fill: #FFFFFF;
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: #2196F3;
 }
 /*---Фильтр---*/
 .filter {
@@ -458,6 +580,8 @@ section {
 .button-portfolio:focus {
   background-color: #188CE8;
   color: var(--title-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 /*----Порфолио---*/
 .portfolio {
@@ -503,4 +627,13 @@ section {
   font-size: 16px;
   line-height: 1.87;
   color: var(--color-text);
+}
+.portfolio-item:hover {
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+  0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16);
+
 }
